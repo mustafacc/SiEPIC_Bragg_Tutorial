@@ -3,10 +3,10 @@
 #    see https://github.com/mustafacc/SiEPIC_Photonics_Package/ for documentation
 #
 #    Author: Mustafa Hammood   ; mustafa@siepic.com   ; mustafa@ece.ubc.ca
-#    SiEPIC Kits Ltd. 2020     ; University of British Columbia
+#    SiEPIC Kits Ltd. 2022     ; University of British Columbia
 #
-#    (c)2021
-
+#    (c)2022
+period = 318e-9;
 select('::model::');
 
 wavelength_start = get('wavelength_start');
@@ -52,3 +52,14 @@ write(name+'.txt', data_str);
 
 # save as an INTC LDF compact model
 savedcard(name);
+
+# plot phase match condition
+PhaseMatch = wavl/(2*period);
+leg = cell(2);
+plot(wavl*1e6,neff,"Wavelength (um)", "Effective Index");
+holdon;
+leg{1} = 'Effective index';
+plot(wavl*1e6, PhaseMatch);
+leg{2} = "Grating period: "+num2str(period*1e9) +" nm";
+legend(leg);
+holdoff;
