@@ -81,12 +81,9 @@ def examples(num):
     """
     if num == 4:
 
-        device = ContraDC(polyfit_file="Tutorial/polyfit.txt", period=335e-9)
-        device.simulate()
+        device = ContraDC(polyfit_file="Tutorial/SiN_1550_TE_w1_850nm_w2_1150nm_thickness_400nm.txt", period=335e-9)
+        device.simulate().displayResults()
 
-        plt.plot(device.wavelength*1e9, device.drop)
-        plt.plot(device.wavelength*1e9, device.thru)
-        plt.show()
 
 
     """Example 5: Lumerical-assisted flow
@@ -132,7 +129,7 @@ def examples(num):
         device.gen_sparams() # this will create a ContraDC_sparams.dat file to import into INTC
 
 
-examples(6)
+examples(4)
 
     
 
