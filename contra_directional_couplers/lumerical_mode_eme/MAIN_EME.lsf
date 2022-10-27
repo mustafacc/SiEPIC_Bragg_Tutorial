@@ -41,7 +41,6 @@ sidewall_angle = 83;
 
 AR = true; # enable/disablel out-of-phase, anti-reflection gratings design
 
-
 thickness_device = 220e-9; # waveguide full thickness
 thickness_rib = 90e-9; # waveguide rib layer thickness
 thickness_superstrate = 2e-6; # superstrate thikness
