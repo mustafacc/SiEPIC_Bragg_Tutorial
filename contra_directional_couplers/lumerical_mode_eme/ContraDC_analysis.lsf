@@ -47,3 +47,5 @@ function find_bw(response, wavelength, limit){
 out = find_bw( D, wl, max(D)/2);
 dropBandwidth_3dB = out(1);
 centralWavelength = out(2);
+
+kappa = n_g_avg*pi*dropBandwidth_3dB/(centralWavelength^2);

@@ -1,4 +1,5 @@
 # materials.lsf - creates a dispersive material model in Lumerical.
+try{
 matname = "Si (Silicon) - Dispersive & Lossless";
 newmaterial = addmaterial("Lorentz");
 setmaterial(newmaterial,"name",matname);
@@ -28,3 +29,4 @@ newmaterial = addmaterial("Dielectric");
 setmaterial(newmaterial,"name",matname);
 setmaterial(matname,"Permittivity",1.444^2);
 setmaterial(matname,"color",[0.5, 0.5, 0.5, 1]); # grey
+}

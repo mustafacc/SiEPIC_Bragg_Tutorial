@@ -22,7 +22,7 @@ A = matrix(res,1);
 W = (W1+W2);
 dW = (dW1+dW2);
 
-sim_y_span = W1*5 + dW*5;
+sim_y_span = W1*6 + dW*6;
 sim_z_span = thickness_device*15;
 
 # add fine mesh region

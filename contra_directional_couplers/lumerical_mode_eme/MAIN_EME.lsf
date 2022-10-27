@@ -54,5 +54,6 @@ mat_substrate = 'SiO2 (Glass) - Palik'; # substrate material
 mat_handle = 'Si (Silicon) - Dispersive & Lossless'; # handle substrate material
 
 ContraDC_draw;
+ContraDC_simulatemodes;
 ContraDC_simulate;
 ContraDC_analysis;
