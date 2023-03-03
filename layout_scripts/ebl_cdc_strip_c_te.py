@@ -14,7 +14,7 @@ layout.io = "GC_TE_1550_8degOxide_BB"
 layout.io_lib = "EBeam"
 layout.cdc = "contra_directional_coupler"
 layout.cdc_lib = "EBeam"
-layout.num_sweep = 20
+layout.num_sweep = 21
 layout.wavl = 1550
 layout.pol = "TE"
 layout.label = "device_cdc_strip"
@@ -24,7 +24,7 @@ layout.layer_floorplan = 'FloorPlan'
 layout.wg_spacing = 1
 
 layout.number_of_periods = 1400
-layout.grating_period = 0.322  # µm
+layout.grating_period = np.arange(0.31, 0.33, 0.001)  # µm
 layout.wg1_width = 0.56  # µm
 layout.wg2_width = 0.44  # µm
 layout.corrugation1_width = 0.048  # µm
